@@ -9,7 +9,7 @@ const App = () => {
   // With Useref
   const imageLoaded = useRef(0);
   // SameThing with useState
-  const [imagesloaded , setImagesLoaded] = useState(0);
+  // const [imagesloaded , setImagesLoaded] = useState(0);
   useEffect(()=>{
     preloadImages()
   })
@@ -21,6 +21,8 @@ const App = () => {
       img.onload=()=>{
         imageLoaded.current++;
         console.log(imageLoaded.current);
+        // through set State 
+        // setImagesLoaded(imageLoaded++)
         
       }
     }
